@@ -1,8 +1,12 @@
 const User = require('../models/user');
 
-const getUserInfo = (req, res, next) => User.findById(req.user._id)
-  .then((user) => res.send(user))
-  .catch(next);
+const getUserInfo = (req, res, next) => {
+  console.log('Отработал контроллер  гет юер инфо');
+  console.log(req.user);
+  User.findById(req.user._id)
+    .then((user) => res.send(user))
+    .catch(next);
+};
 
 const changeUserInfo = (req, res, next) => {
   const newUserData = {
@@ -19,6 +23,6 @@ const changeUserInfo = (req, res, next) => {
 };
 
 module.exports = {
-  getUserInfo,
   changeUserInfo,
+  getUserInfo,
 };
