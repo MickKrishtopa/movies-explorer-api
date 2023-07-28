@@ -9,6 +9,7 @@ const cors = require('cors');
 const routes = require('./routes/routes');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
+const requestRateLimit = require('./middlewares/requestRateLimit');
 
 const {
   PORT = 3000,
@@ -29,8 +30,9 @@ mongoose
   });
 
 const app = express();
-app.use(cors({ origin: CORS_URL, credentials: true }));
 
+app.use(requestRateLimit);
+app.use(cors({ origin: CORS_URL, credentials: true }));
 app.use(cookieParser());
 app.use(bodyParser.json());
 

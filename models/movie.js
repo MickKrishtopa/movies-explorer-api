@@ -17,13 +17,10 @@ const movieSchema = new mongoose.Schema({
   duration: {
     type: Number,
     required: true,
-    maxlength: 10,
   },
   year: {
     type: String,
     required: true,
-    minlength: 4,
-    maxlength: 5,
   },
   description: {
     type: String,
@@ -43,7 +40,7 @@ const movieSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator: (string) => validator.isURL(string),
-      message: 'Ссылка некорректная',
+      message: 'Ссылка на трейлер некорректная',
     },
   },
   thumbnail: {

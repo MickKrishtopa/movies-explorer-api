@@ -1,7 +1,7 @@
-const bcrypt = require('bcryptjs');
-const User = require('../models/user');
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
+const User = require('../models/user');
 const { generateToken } = require('../utils/jwt');
 const NotFoundError = require('../errors/NotFoundError');
 const ValidationError = require('../errors/ValidationError');
