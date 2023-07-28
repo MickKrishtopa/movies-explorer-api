@@ -5,6 +5,7 @@ const getSavedMovies = (req, res, next) => Movie.find({})
   .catch(next);
 
 const createSavedMovie = (req, res, next) => {
+  console.log('create');
   const newSavedMovieData = req.body;
   const newSavedMovieOwner = req.user._id;
 
