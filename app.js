@@ -16,6 +16,7 @@ const {
   DB_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb',
   CORS_URL = 'http://localhost:3000',
 } = process.env;
+console.log('PORT:', PORT, 'DB_URL:', DB_URL, 'CORS_URL', CORS_URL);
 
 mongoose
   .connect(DB_URL, {
