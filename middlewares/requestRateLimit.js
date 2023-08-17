@@ -1,8 +1,8 @@
-const rateLimit = require('express-rate-limit');
+const rateLimit = require("express-rate-limit");
 
 const limiter = rateLimit({
-  windowMs: 2 * 1000,
-  max: 1,
+  windowMs: 2 * 60 * 1000,
+  max: 100,
   standardHeaders: true,
   legacyHeaders: false,
 });
