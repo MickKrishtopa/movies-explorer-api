@@ -98,7 +98,7 @@ const login = (req, res, next) => {
 
 const logOut = (req, res) => {
   res.clearCookie("jwt");
-  res.send("Вы вышли из своего аккаунта");
+  res.send({ message: "Вы вышли из своего аккаунта" });
 };
 
 module.exports = {
