@@ -1,10 +1,10 @@
-const { celebrate, Joi } = require('celebrate');
-const urlPattern = require('../../utils/constants');
+const { celebrate, Joi } = require("celebrate");
+const urlPattern = require("../../utils/constants");
 
 const createUserValidation = celebrate({
   body: Joi.object().keys({
-    country: Joi.string().min(2).max(30).required(),
-    director: Joi.string().min(2).max(30).required(),
+    country: Joi.string().min(2).max(50).required(),
+    director: Joi.string().min(2).max(80).required(),
     duration: Joi.number().required(),
     year: Joi.string().required(),
     description: Joi.string().min(2).required(),
@@ -14,7 +14,6 @@ const createUserValidation = celebrate({
     movieId: Joi.number().required(),
     nameRU: Joi.string().required(),
     nameEN: Joi.string().required(),
-
   }),
 });
 
