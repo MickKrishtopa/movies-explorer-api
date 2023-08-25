@@ -97,7 +97,7 @@ const login = (req, res, next) => {
 };
 
 const logOut = (req, res) => {
-  res.clearCookie("jwt", { path: "/" });
+  res.clearCookie("jwt", { sameSite: "none", secure: true });
   res.send({ message: "Вы вышли из своего аккаунта" });
 };
 
