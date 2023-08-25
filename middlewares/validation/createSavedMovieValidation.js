@@ -3,7 +3,7 @@ const urlPattern = require("../../utils/constants");
 
 const createUserValidation = celebrate({
   body: Joi.object().keys({
-    country: Joi.string().min(2).max(50).required(),
+    country: Joi.string().min(2).max(80).required(),
     director: Joi.string().min(2).max(80).required(),
     duration: Joi.number().required(),
     year: Joi.string().required(),
