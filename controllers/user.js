@@ -99,7 +99,11 @@ const login = (req, res, next) => {
 };
 
 const logOut = (req, res) => {
-  res.clearCookie("jwt", { sameSite: "none", secure: true });
+  res.clearCookie("jwt", {
+    sameSite: "none",
+    secure: true,
+    domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+  });
   res.send({ message: "Вы вышли из своего аккаунта" });
 };
 
