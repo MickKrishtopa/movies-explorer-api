@@ -86,11 +86,11 @@ const login = (req, res, next) => {
     .then((user) => {
       const token = generateToken(user._id);
       res.cookie("jwt", token, {
-        maxAge: 604800000,
+        maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true,
         secure: true,
         sameSite: "none",
-        // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
+        domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "localhost:3000",
       });
       return res.send({ message: "Авторизация прошла успешно" });
