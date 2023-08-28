@@ -36,6 +36,13 @@ const app = express();
 app.use(requestRateLimit);
 
 app.use(
+  cors({
+    origin: CORS_URL,
+    credentials: true,
+  })
+);
+
+app.use(
   session({
     name: "__session",
 
@@ -48,8 +55,7 @@ app.use(
     saveUninitialized: false,
 
     proxy: true,
-    origin: CORS_URL,
-    credentials: true,
+
     cookie: {
       sameSite: "none",
 
@@ -62,12 +68,6 @@ app.use(
   })
 );
 
-app.use(
-  cors({
-    origin: CORS_URL,
-    credentials: true,
-  })
-);
 app.use(cookieParser());
 app.use(bodyParser.json());
 
