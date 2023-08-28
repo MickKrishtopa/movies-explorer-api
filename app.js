@@ -36,7 +36,7 @@ const app = express();
 app.use(requestRateLimit);
 app.use(
   cors({
-    origin: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
+    origin: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
     credentials: true,
   })
 );
