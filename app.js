@@ -42,32 +42,6 @@ app.use(
   })
 );
 
-app.use(
-  session({
-    name: "__session",
-
-    store: new RedisStore({ client: redisClient }),
-
-    secret: env.Secret,
-
-    resave: false,
-
-    saveUninitialized: false,
-
-    proxy: true,
-
-    cookie: {
-      sameSite: "none",
-
-      secure: true,
-
-      httpOnly: true,
-
-      maxAge: 1000 * 60 * 60 * 24 * 7,
-    },
-  })
-);
-
 app.use(cookieParser());
 app.use(bodyParser.json());
 
