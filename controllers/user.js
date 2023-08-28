@@ -96,7 +96,7 @@ const login = (req, res, next) => {
 
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
-        domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+        domain: ".diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
 
         // Указывал домене бэка в разных вариациях
