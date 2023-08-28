@@ -34,8 +34,12 @@ mongoose
 const app = express();
 
 app.use(requestRateLimit);
-app.options("*", cors());
-app.use(cors({ origin: CORS_URL, credentials: true }));
+app.use(
+  cors({
+    origin: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use(bodyParser.json());
 
