@@ -88,7 +88,7 @@ const login = (req, res, next) => {
       res.cookie("jwt", token, {
         maxAge: 7 * 24 * 60 * 60 * 1000,
         httpOnly: true,
-        // secure: true,
+        secure: true,
         sameSite: "none",
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
@@ -105,7 +105,7 @@ const logOut = (req, res) => {
   res.clearCookie("jwt", {
     sameSite: "none",
     secure: true,
-    domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+    // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
   });
   res.send({ message: "Вы вышли из своего аккаунта" });
 };
