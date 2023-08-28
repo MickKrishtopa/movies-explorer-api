@@ -48,7 +48,8 @@ app.use(
     saveUninitialized: false,
 
     proxy: true,
-
+    origin: CORS_URL,
+    credentials: true,
     cookie: {
       sameSite: "none",
 
