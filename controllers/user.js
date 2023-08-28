@@ -90,9 +90,9 @@ const login = (req, res, next) => {
         httpOnly: true,
         // secure: true,
         sameSite: "none",
-        domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+        // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
-        // domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+        domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
 
         // domain: "localhost:3000",
