@@ -34,6 +34,33 @@ mongoose
 const app = express();
 
 app.use(requestRateLimit);
+
+app.use(
+  session({
+    name: "__session",
+
+    store: new RedisStore({ client: redisClient }),
+
+    secret: env.Secret,
+
+    resave: false,
+
+    saveUninitialized: false,
+
+    proxy: true,
+
+    cookie: {
+      sameSite: "none",
+
+      secure: true,
+
+      httpOnly: true,
+
+      maxAge: 1000 * 60 * 60 * 24 * 7,
+    },
+  })
+);
+
 app.use(
   cors({
     origin: CORS_URL,
