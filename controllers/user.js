@@ -90,11 +90,22 @@ const login = (req, res, next) => {
         httpOnly: true,
         secure: true,
         sameSite: "none",
+        path: "/",
+
+        //Указывал домены фронта в разных вариациях
+
+        // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
+        // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+        domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+        // domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
+
+        // Указывал домене бэка в разных вариациях
+
         // domain: "http://diplom.mickkrishtopa.nomoredomainsicu.ru/",
         // domain: "http://diplom.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "diplom.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "diplom.mickkrishtopa.nomoredomainsicu.ru/",
-        domain: ".mickkrishtopa.nomoredomainsicu.ru",
+        // domain: ".mickkrishtopa.nomoredomainsicu.ru",
         // domain: "localhost:3000",
       });
       return res.send({ message: "Авторизация прошла успешно" });
