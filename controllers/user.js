@@ -92,9 +92,8 @@ const login = (req, res, next) => {
         sameSite: "none",
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "http://diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
-        domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
+        // domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru",
         // domain: "diplom-frnt.mickkrishtopa.nomoredomainsicu.ru/",
-
         // domain: "localhost:3000",
       });
       return res.send({ message: "Авторизация прошла успешно" });
